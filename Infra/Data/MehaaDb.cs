@@ -14,10 +14,9 @@ namespace Infra.Data
 
         public DbSet<ItemCategory> ItemCategories { get; set; }
 
-        public MehaaDb(DbContextOptions<MehaaDb> options) : base(options)
-        {
+        public DbSet<Customer> Customers { get; set; }
 
-        }
+        public MehaaDb(DbContextOptions<MehaaDb> options) : base(options) { }
     }
 }
 

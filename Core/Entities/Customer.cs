@@ -13,6 +13,12 @@ namespace Core.Entities
 
         public string LastName { get; set; }
 
+        public string AddressLine1 { get; set; }
+
+        public string AddressLine2 { get; set; }
+
+        public string AddressLine3 { get; set; }
+
         [EmailAddress]
         public string Email { get; set; }
 
