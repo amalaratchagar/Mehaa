@@ -21,6 +21,7 @@ namespace Web.Services
     {
         Task<string> ToStringAsync<T>(string viewName, T model);
     }
+
     public class RazorRenderService : IRazorRenderService
     {
         private readonly IRazorViewEngine _razorViewEngine;
