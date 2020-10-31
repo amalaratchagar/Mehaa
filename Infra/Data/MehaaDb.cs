@@ -10,13 +10,9 @@ namespace Infra.Data
 {
     public class MehaaDb : DbContext
     {
-        public DbSet<Item> Students { get; set; }
-        public DbSet<ItemCategory> Courses { get; set; }
+        public DbSet<Item> Items { get; set; }
 
-        public MehaaDb()
-        {
-
-        }
+        public DbSet<ItemCategory> ItemCategories { get; set; }
 
         public MehaaDb(DbContextOptions<MehaaDb> options) : base(options)
         {
