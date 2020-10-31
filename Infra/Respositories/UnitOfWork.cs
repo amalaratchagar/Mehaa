@@ -1,11 +1,11 @@
 ﻿using Core.Interfaces;
-using Infra.Data;
+using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infra.Respositories
+namespace Infrastructure.Respositories
 {
     public class UnitOfWork : IUnitOfWork
     {

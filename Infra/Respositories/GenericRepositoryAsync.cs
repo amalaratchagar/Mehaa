@@ -10,9 +10,9 @@ namespace Infrastructure.Respositories
 {
     public class GenericRepositoryAsync<T> : IGenericRepositoryAsync<T> where T : class
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly MehaaDb _dbContext;
 
-        public GenericRepositoryAsync(ApplicationDbContext dbContext)
+        public GenericRepositoryAsync(MehaaDb dbContext)
         {
             _dbContext = dbContext;
         }

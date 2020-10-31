@@ -12,7 +12,7 @@ namespace Infrastructure.Respositories
     {
         private readonly DbSet<Customer> _customer;
 
-        public CustomerRepositoryAsync(ApplicationDbContext dbContext) : base(dbContext)
+        public CustomerRepositoryAsync(MehaaDb dbContext) : base(dbContext)
         {
             _customer = dbContext.Set<Customer>();
         }
