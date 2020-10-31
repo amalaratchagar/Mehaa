@@ -37,6 +37,7 @@ namespace Mehaa
             #region Repositories
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
             services.AddTransient<ICustomerRepositoryAsync, CustomerRepositoryAsync>();
+            services.AddTransient<IItemCategoryRepositoryAsync, ItemCategoryRepositoryAsync>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             #endregion
 

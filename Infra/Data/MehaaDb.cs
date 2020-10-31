@@ -1,4 +1,5 @@
 ﻿using Core.Entities;
+using Core.Entities.Inventory;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;

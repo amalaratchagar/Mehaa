@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Core.Entities
+namespace Core.Entities.Inventory
 {
     public enum MeasurementUnit : short
     {
