@@ -2,15 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Interfaces;
 using Infra.Data;
+using Infra.Respositories;
+using Infrastructure.Respositories;
 using Mehaa.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Web.Services;
 
 namespace Mehaa
 {
@@ -30,6 +35,16 @@ namespace Mehaa
               options.UseSqlServer(
                   Configuration.GetConnectionString("DefaultConnection"),
                   b => b.MigrationsAssembly(typeof(MehaaDb).Assembly.FullName)));
+
+            #region Repositories
+            services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
+            services.AddTransient<ICustomerRepositoryAsync, CustomerRepositoryAsync>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            #endregion
+
+            services.AddHttpContextAccessor();
+            services.AddTransient<IActionContextAccessor, ActionContextAccessor>();
+            services.AddScoped<IRazorRenderService, RazorRenderService>();
 
             services.AddControllersWithViews();
             services.AddProgressiveWebApp();
