@@ -46,7 +46,7 @@ namespace Mehaa
             services.AddScoped<IRazorRenderService, RazorRenderService>();
 
             //services.AddControllersWithViews();
-            //services.AddProgressiveWebApp();
+            // services.AddProgressiveWebApp(); Fix me
 
             services.AddRazorPages();
         }
