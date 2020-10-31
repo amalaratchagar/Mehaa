@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Respositories;
-using Mehaa.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
