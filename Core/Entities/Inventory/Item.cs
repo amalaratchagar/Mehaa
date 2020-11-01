@@ -28,10 +28,11 @@ namespace Core.Entities.Inventory
         [Key]
         public int Id { get; set; }
 
+        public string ShortName { get; set; }
+        public string FullName { get; set; }
+
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
-        public string FullName { get; set; }
-        public string ShortName { get; set; }
         public bool IsActive { get; set; }
         public bool IsDiscontinued { get; set; }
         public bool IsOutOfStock { get; set; }

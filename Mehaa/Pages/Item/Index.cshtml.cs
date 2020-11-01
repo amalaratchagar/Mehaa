@@ -43,7 +43,7 @@ namespace Web.Pages.Item
         public async Task<JsonResult> OnGetCreateOrEditAsync(int id = 0)
         {
             if (id == 0)
-                return new JsonResult(new { isValid = true, html = await _renderService.ToStringAsync("_CreateOrEdit", new Core.Entities.Inventory.ItemCategory()) });
+                return new JsonResult(new { isValid = true, html = await _renderService.ToStringAsync("_CreateOrEdit", new Core.Entities.Inventory.Item()) });
             else
             {
                 var thisCustomer = await _item.GetByIdAsync(id);

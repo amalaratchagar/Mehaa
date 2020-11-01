@@ -3,15 +3,17 @@
 <table class="table table-bordered" id="itemsTable">
     <thead>
         <tr>
-            <th>
-                Short Name
-            </th>
-            <th>
-                Edit
-            </th>
-            <th>
-                Remove
-            </th>
+            <th>Short Name</th>
+            <th>Full Name</th>
+            <th>CategoryId</th>
+            <th>MeasurementUnit</th>
+            <th>Price</th>
+            <th>Active</th>
+            <th>Discontinued</th>
+            <th>OutOfStock</th>
+            <th>Returnable</th>
+            <th>Edit</th>
+            <th>Remove</th>
         </tr>
     </thead>
     <tbody>
@@ -20,9 +22,16 @@
             @foreach (var item in Model)
             {
         <tr>
-            <td>
-                @item.ShortName
-            </td>
+            <td>@item.ShortName</td>
+            <td>@item.FullName</td>
+            <td>@item.CategoryId</td>
+            <td>@item.MeasurementUnit</td>
+            <td>@item.Price</td>
+            <td>@item.IsActive</td>
+            <td>@item.IsDiscontinued</td>
+            <td>@item.IsOutOfStock</td>
+            <td>@item.IsReturnable</td>
+
             <td text-right">
                 <a onclick="jQueryModalGet('?handler=CreateOrEdit&id=@item.Id','Edit Item')" class="btn btn-info text-white"> <i class="fa fa-edit"></i></a>
             </td>

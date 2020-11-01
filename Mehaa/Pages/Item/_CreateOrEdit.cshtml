@@ -1,13 +1,48 @@
 ﻿@using Core.Entities.Inventory
 @model Item
 <form id="create-form" method="post" asp-page="Index" asp-route-id="@Model.Id" asp-page-handler="CreateOrEdit" onsubmit="return jQueryModalPost(this);">
+
     <div class="form-group row">
-        <label class="col-md-3 col-form-label">First Name</label>
+        <label class="col-md-3 col-form-label">Short Name</label>
         <div class="col-md-9">
             <input type="text" autocomplete="off" asp-for="ShortName" name="ShortName" class="form-control">
             <span asp-validation-for="ShortName" class="text-danger"></span>
         </div>
     </div>
+
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Full Name</label>
+        <div class="col-md-9">
+            <input type="text" autocomplete="off" asp-for="FullName" name="FullName" class="form-control">
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Category Id</label>
+        <div class="col-md-9">
+            <input type="text" autocomplete="off" asp-for="CategoryId" name="CategoryId" class="form-control">
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Measurement Unit</label>
+        <div class="col-md-9">
+            <input type="text" autocomplete="off" asp-for="MeasurementUnit" name="MeasurementUnit" class="form-control">
+            <span asp-validation-for="MeasurementUnit" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Price</label>
+        <div class="col-md-9">
+            <input type="text" autocomplete="off" asp-for="Price" name="Price" class="form-control">
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+    </div>
+
+
     <div class="form-group row">
         <div class="col-md-3">
         </div>
