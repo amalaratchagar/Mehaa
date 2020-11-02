@@ -40,6 +40,8 @@ namespace Mehaa
             services.AddTransient<IItemCategoryRepositoryAsync, ItemCategoryRepositoryAsync>();
             services.AddTransient<IItemRepositoryAsync, ItemRepositoryAsync>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddTransient<ILookupRepositoryAsync, LookupRepositoryAsync>();
             #endregion
 
             services.AddHttpContextAccessor();
