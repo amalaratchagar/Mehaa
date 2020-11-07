@@ -15,6 +15,8 @@ namespace Infrastructure.Data
 
         public DbSet<ItemCategory> ItemCategories { get; set; }
 
+        public DbSet<ItemStock> ItemStocks { get; set; }
+
         public DbSet<Customer> Customers { get; set; }
 
         public MehaaDb(DbContextOptions<MehaaDb> options) : base(options) { }
