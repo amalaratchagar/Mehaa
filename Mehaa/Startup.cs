@@ -42,6 +42,7 @@ namespace Mehaa
             services.AddTransient<IItemStockRepositoryAsync, ItemStockRepositoryAsync>();
             services.AddTransient<IItemRepositoryAsync, ItemRepositoryAsync>();
             services.AddTransient<IPermissionRepositoryAsync, PermissionRepositoryAsync>();
+            services.AddTransient<IUserPermissionRepositoryAsync, UserPermissionRepositoryAsync>();
             services.AddTransient<IUserRepositoryAsync, UserRepositoryAsync>();
             services.AddTransient<ILookupRepositoryAsync, LookupRepositoryAsync>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();

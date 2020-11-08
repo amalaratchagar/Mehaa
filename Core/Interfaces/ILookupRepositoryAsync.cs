@@ -1,15 +1,16 @@
-﻿using Core.Entities;
-using Core.Entities.Inventory;
-using System;
+﻿using Core.Entities.Inventory;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Core.Interfaces
 {
-    public interface ILookupRepositoryAsync 
+    public interface ILookupRepositoryAsync
     {
         public IEnumerable<ItemCategory> GetCategories();
 
         public IEnumerable<Item> GetItems();
+
+        public IEnumerable<Entities.User.User> GetUsers();
+
+        public IEnumerable<Entities.User.Permission> GetPermissions();
     }
 }
