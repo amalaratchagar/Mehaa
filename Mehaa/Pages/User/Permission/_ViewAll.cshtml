@@ -24,7 +24,7 @@
                 @permission.Name
             </td>
             <td text-right">
-                <a onclick="jQueryModalGet('?handler=CreateOrEdit&id=@permission.Id','Edit Item Category')" class="btn btn-info text-white"> <i class="fa fa-edit"></i></a>
+                <a onclick="jQueryModalGet('?handler=CreateOrEdit&id=@permission.Id','Edit Permission')" class="btn btn-info text-white"> <i class="fa fa-edit"></i></a>
             </td>
             <td text-right">
                 <form method="post" asp-page="Index" asp-route-id="@permission.Id" asp-page-handler="Delete" onsubmit="return jQueryModalDelete(this)" class="d-inline">

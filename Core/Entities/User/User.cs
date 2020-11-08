@@ -16,7 +16,7 @@ namespace Core.Entities.User
         public string Password { get; set; }
         public string PasswordHash { get; set; }
         public string Email { get; set; }
-        public string Modile { get; set; }
+        public string Mobile { get; set; }
         public bool IsDeleted { get; set; }
 
         public virtual ICollection<UserPermission> UserPermissions { get; set; }
