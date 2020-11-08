@@ -34,6 +34,9 @@ namespace Core.Entities.Inventory
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
 
+        [ForeignKey("Supplier")]
+        public int? SupplierId { get; set; }
+
         public bool IsActive { get; set; }
         public bool IsDiscontinued { get; set; }
         public bool IsOutOfStock { get; set; }
@@ -42,6 +45,8 @@ namespace Core.Entities.Inventory
         public MeasurementUnit MeasurementUnit { get; set; }
 
         public virtual ItemCategory Category { get; set; }
+
+        public virtual Supplier Supplier { get; set; }
 
         public Item()
         {

@@ -21,6 +21,8 @@ namespace Infrastructure.Data
 
         public DbSet<UserPermission> UserPermissions { get; set; }
 
+        public DbSet<Supplier> Suppliers { get; set; }
+
         public MehaaDb(DbContextOptions<MehaaDb> options) : base(options)
         {
         }
