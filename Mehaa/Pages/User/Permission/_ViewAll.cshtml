@@ -7,6 +7,9 @@
                 Name
             </th>
             <th>
+                Permissions
+            </th>
+            <th>
                 Edit
             </th>
             <th>
@@ -22,6 +25,9 @@
         <tr>
             <td>
                 @permission.Name
+            </td>
+            <td>
+                @permission.Permissions
             </td>
             <td text-right">
                 <a onclick="jQueryModalGet('?handler=CreateOrEdit&id=@permission.Id','Edit Permission')" class="btn btn-info text-white"> <i class="fa fa-edit"></i></a>
