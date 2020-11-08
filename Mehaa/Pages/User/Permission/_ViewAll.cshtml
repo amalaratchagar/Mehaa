@@ -1,0 +1,43 @@
+﻿@using Core.Entities.User
+@model IEnumerable<Permission>
+<table class="table table-bordered" id="permissionTable">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Remove
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() != 0)
+        {
+            @foreach (var permission in Model)
+            {
+        <tr>
+            <td>
+                @permission.Name
+            </td>
+            <td text-right">
+                <a onclick="jQueryModalGet('?handler=CreateOrEdit&id=@permission.Id','Edit Item Category')" class="btn btn-info text-white"> <i class="fa fa-edit"></i></a>
+            </td>
+            <td text-right">
+                <form method="post" asp-page="Index" asp-route-id="@permission.Id" asp-page-handler="Delete" onsubmit="return jQueryModalDelete(this)" class="d-inline">
+                    <button type="submit" class="btn btn-danger text-white"> <i class="fa fa-trash"></i></button>
+                </form>
+            </td>
+        </tr>
+            }
+        }
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $("#permissionTable").DataTable();
+    });
+</script>

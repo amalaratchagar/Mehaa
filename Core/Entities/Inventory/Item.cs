@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Core.Entities.Inventory
@@ -19,6 +18,7 @@ namespace Core.Entities.Inventory
 
         // Volume
         Liter = 31,
+
         Milliliter = 32,
         Kiloliter = 33,
     }
@@ -33,6 +33,7 @@ namespace Core.Entities.Inventory
 
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
+
         public bool IsActive { get; set; }
         public bool IsDiscontinued { get; set; }
         public bool IsOutOfStock { get; set; }
@@ -42,6 +43,8 @@ namespace Core.Entities.Inventory
 
         public virtual ItemCategory Category { get; set; }
 
-        public Item() { }
+        public Item()
+        {
+        }
     }
 }

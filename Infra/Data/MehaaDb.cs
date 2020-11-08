@@ -1,11 +1,7 @@
 ﻿using Core.Entities;
 using Core.Entities.Inventory;
+using Core.Entities.User;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Data
 {
@@ -19,8 +15,14 @@ namespace Infrastructure.Data
 
         public DbSet<Customer> Customers { get; set; }
 
-        public MehaaDb(DbContextOptions<MehaaDb> options) : base(options) { }
+        public DbSet<Permission> Permissions { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<UserPermission> UserPermissions { get; set; }
+
+        public MehaaDb(DbContextOptions<MehaaDb> options) : base(options)
+        {
+        }
     }
 }
-
-

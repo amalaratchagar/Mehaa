@@ -6,7 +6,7 @@ namespace Core.Entities.User
     {
         public User()
         {
-            UserPermisssions = new HashSet<UserPermisssion>();
+            UserPermissions = new HashSet<UserPermission>();
         }
 
         public int Id { get; set; }
@@ -19,6 +19,6 @@ namespace Core.Entities.User
         public string Modile { get; set; }
         public bool IsDeleted { get; set; }
 
-        public virtual ICollection<UserPermisssion> UserPermisssions { get; set; }
+        public virtual ICollection<UserPermission> UserPermissions { get; set; }
     }
 }

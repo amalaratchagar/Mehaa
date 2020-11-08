@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,6 +20,8 @@ namespace Core.Entities.Inventory
 
         public Item Item { get; set; }
 
-        public ItemStock() { }
+        public ItemStock()
+        {
+        }
     }
 }
