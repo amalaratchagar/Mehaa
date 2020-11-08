@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Core.Interfaces
 {
-    public interface IItemStockRepositoryAsync : IGenericRepositoryAsync<ItemStock>
+    public interface IItemCategoryRepositoryAsync : IGenericRepositoryAsync<ItemCategory>
     {
     }
 }

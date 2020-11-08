@@ -9,5 +9,7 @@ namespace Core.Interfaces
     public interface ILookupRepositoryAsync 
     {
         public IEnumerable<ItemCategory> GetCategories();
+
+        public IEnumerable<Item> GetItems();
     }
 }

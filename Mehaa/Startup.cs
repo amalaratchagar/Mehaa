@@ -38,6 +38,7 @@ namespace Mehaa
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
             services.AddTransient<ICustomerRepositoryAsync, CustomerRepositoryAsync>();
             services.AddTransient<IItemCategoryRepositoryAsync, ItemCategoryRepositoryAsync>();
+            services.AddTransient<IItemStockRepositoryAsync, ItemStockRepositoryAsync>();
             services.AddTransient<IItemRepositoryAsync, ItemRepositoryAsync>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 

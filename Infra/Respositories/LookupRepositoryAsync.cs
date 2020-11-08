@@ -23,5 +23,10 @@ namespace Infrastructure.Respositories
         {
            return _mehaaDb.Set<ItemCategory>().ToList();
         }
+
+        public IEnumerable<Item> GetItems()
+        {
+            return _mehaaDb.Set<Item>().ToList();
+        }
     }
 }
