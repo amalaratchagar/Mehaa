@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Core.Entities.User
 {
@@ -12,8 +13,16 @@ namespace Core.Entities.User
         [ForeignKey("Permission")]
         public int PermisssionId { get; set; }
 
+        [DefaultValue(true)]
+        public bool IsActive { get; set; }
+
         public virtual User User { get; set; }
 
         public virtual Permission Permission { get; set; }
+
+        public UserPermission()
+        {
+            IsActive = true;
+        }
     }
 }

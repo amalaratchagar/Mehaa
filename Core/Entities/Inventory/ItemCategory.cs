@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Core.Entities.Inventory
 {
@@ -9,10 +10,12 @@ namespace Core.Entities.Inventory
 
         public string Name { get; set; }
 
+        [DefaultValue(true)]
         public bool IsActive { get; set; }
 
         public ItemCategory()
         {
+            IsActive = true;
         }
     }
 }

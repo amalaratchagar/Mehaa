@@ -3,17 +3,14 @@ using Core.Entities.Inventory;
 using Core.Entities.User;
 using Core.Interfaces;
 using Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Infrastructure.Respositories
 {
     public class LookupRepositoryAsync : ILookupRepositoryAsync
     {
-        MehaaDb _mehaaDb;
+        private MehaaDb _mehaaDb;
 
         public LookupRepositoryAsync(MehaaDb dbContext)
         {
@@ -22,7 +19,7 @@ namespace Infrastructure.Respositories
 
         public IEnumerable<ItemCategory> GetCategories()
         {
-           return _mehaaDb.Set<ItemCategory>().ToList();
+            return _mehaaDb.Set<ItemCategory>().ToList();
         }
 
         public IEnumerable<Item> GetItems()
@@ -33,6 +30,11 @@ namespace Infrastructure.Respositories
         public IEnumerable<Permission> GetPermissions()
         {
             return _mehaaDb.Set<Permission>().ToList();
+        }
+
+        public IEnumerable<Supplier> GetSuppliers()
+        {
+            return _mehaaDb.Set<Supplier>().ToList();
         }
 
         public IEnumerable<User> GetUsers()

@@ -12,5 +12,7 @@ namespace Core.Interfaces
         public IEnumerable<Entities.User.User> GetUsers();
 
         public IEnumerable<Entities.User.Permission> GetPermissions();
+
+        public IEnumerable<Entities.Supplier> GetSuppliers();
     }
 }

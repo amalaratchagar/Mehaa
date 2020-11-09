@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Core.Entities.Inventory
@@ -28,7 +29,11 @@ namespace Core.Entities.Inventory
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(20)]
         public string ShortName { get; set; }
+
+        [MaxLength(200)]
         public string FullName { get; set; }
 
         [ForeignKey("Category")]
@@ -37,19 +42,29 @@ namespace Core.Entities.Inventory
         [ForeignKey("Supplier")]
         public int? SupplierId { get; set; }
 
+        [DefaultValue(true)]
         public bool IsActive { get; set; }
+
         public bool IsDiscontinued { get; set; }
+
         public bool IsOutOfStock { get; set; }
+
         public bool IsReturnable { get; set; }
+
         public double Price { get; set; }
+
         public MeasurementUnit MeasurementUnit { get; set; }
 
         public virtual ItemCategory Category { get; set; }
 
         public virtual Supplier Supplier { get; set; }
 
+        [NotMapped]
+        public int Quantity { get; set; }
+
         public Item()
         {
+            IsActive = true;
         }
     }
 }

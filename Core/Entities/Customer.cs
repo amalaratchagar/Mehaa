@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Core.Entities
 {
@@ -26,5 +27,13 @@ namespace Core.Entities
         public string PhoneNumber { get; set; }
 
         public string Company { get; set; }
+
+        [DefaultValue(true)]
+        public bool IsActive { get; set; }
+
+        public Customer()
+        {
+            IsActive = true;
+        }
     }
 }
