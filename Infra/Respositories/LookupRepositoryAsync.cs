@@ -19,27 +19,27 @@ namespace Infrastructure.Respositories
 
         public IEnumerable<ItemCategory> GetCategories()
         {
-            return _mehaaDb.Set<ItemCategory>().ToList();
+            return _mehaaDb.Set<ItemCategory>().Where(entity => entity.IsActive).ToList();
         }
 
         public IEnumerable<Item> GetItems()
         {
-            return _mehaaDb.Set<Item>().ToList();
+            return _mehaaDb.Set<Item>().Where(entity => entity.IsActive).ToList();
         }
 
         public IEnumerable<Permission> GetPermissions()
         {
-            return _mehaaDb.Set<Permission>().ToList();
+            return _mehaaDb.Set<Permission>().Where(entity => entity.IsActive).ToList();
         }
 
         public IEnumerable<Supplier> GetSuppliers()
         {
-            return _mehaaDb.Set<Supplier>().ToList();
+            return _mehaaDb.Set<Supplier>().Where(entity => entity.IsActive).ToList();
         }
 
         public IEnumerable<User> GetUsers()
         {
-            return _mehaaDb.Set<User>().ToList();
+            return _mehaaDb.Set<User>().Where(entity => entity.IsActive).ToList();
         }
     }
 }
