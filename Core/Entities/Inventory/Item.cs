@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -51,7 +52,13 @@ namespace Core.Entities.Inventory
 
         public bool IsReturnable { get; set; }
 
-        public double Price { get; set; }
+        [Required]
+        [Range(minimum: 0.01, maximum: 9999999.99)]
+        public decimal CostPrice { get; set; }
+
+        [Required]
+        [Range(minimum: 0.01, maximum: 9999999.99)]
+        public decimal SellingPrice { get; set; }
 
         public MeasurementUnit MeasurementUnit { get; set; }
 
