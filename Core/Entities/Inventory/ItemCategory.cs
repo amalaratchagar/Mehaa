@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Core.Entities.Inventory
 {
@@ -13,6 +14,7 @@ namespace Core.Entities.Inventory
         [Required]
         [DefaultValue(5.00)]
         [Range(minimum: 0.01, maximum: 99.99)]
+        [Column(TypeName = "decimal(2,2)")]
         public decimal MarginPercentage { get; set; }
 
         [DefaultValue(true)]

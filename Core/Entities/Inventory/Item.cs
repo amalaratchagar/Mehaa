@@ -54,10 +54,14 @@ namespace Core.Entities.Inventory
 
         [Required]
         [Range(minimum: 0.01, maximum: 9999999.99)]
+        [Column(TypeName = "decimal(10,2)")]
+        [DefaultValue(0.00)]
         public decimal CostPrice { get; set; }
 
         [Required]
         [Range(minimum: 0.01, maximum: 9999999.99)]
+        [Column(TypeName = "decimal(10,2)")]
+        [DefaultValue(0.00)]
         public decimal SellingPrice { get; set; }
 
         public MeasurementUnit MeasurementUnit { get; set; }
