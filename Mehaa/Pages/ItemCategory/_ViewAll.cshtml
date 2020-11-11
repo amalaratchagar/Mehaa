@@ -7,6 +7,9 @@
                 Name
             </th>
             <th>
+                Margin Percentage
+            </th>
+            <th>
                 Edit
             </th>
             <th>
@@ -22,6 +25,9 @@
         <tr>
             <td>
                 @itemCategory.Name
+            </td>
+            <td>
+                @itemCategory.MarginPercentage
             </td>
             <td text-right">
                 <a onclick="jQueryModalGet('?handler=CreateOrEdit&id=@itemCategory.Id','Edit Item Category')" class="btn btn-info text-white"> <i class="fa fa-edit"></i></a>

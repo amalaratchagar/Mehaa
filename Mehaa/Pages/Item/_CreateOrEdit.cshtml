@@ -45,10 +45,18 @@
     </div>
 
     <div class="form-group row">
-        <label class="col-md-3 col-form-label">Price</label>
+        <label class="col-md-3 col-form-label">Cost Price</label>
         <div class="col-md-9">
-            <input type="text" autocomplete="off" asp-for="Price" name="Price" class="form-control">
-            <span asp-validation-for="Price" class="text-danger"></span>
+            <input type="number" autocomplete="off" asp-for="CostPrice" name="CostPrice" class="form-control">
+            <span asp-validation-for="CostPrice" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Selling Price</label>
+        <div class="col-md-9">
+            <input type="number" autocomplete="off" asp-for="SellingPrice" name="SellingPrice" class="form-control">
+            <span asp-validation-for="SellingPrice" class="text-danger"></span>
         </div>
     </div>
 
